@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="f5 f4-m f3-ns pa3 ph4-m ph5-l">
+	{{ .Content }}
+</div>
+<div class="section-grid mt-content ph4-m ph5-l">
+	{{ $indexScratch := $.Scratch }}
+	{{ range .Pages.ByWeight }}
+
+		{{ $indexScratch.Set "link" .RelPermalink }}
+		{{ range first 1 .Params.images }}
+			{{ $indexScratch.Set "image" . }}
+		{{ end }}
+		{{ if isset .Params "featured_image" }}
+			{{ $indexScratch.Set "image" .Params.featured_image }}
+		{{ end }}
+
+		{{ $indexScratch.Set "title" .Params.title }}
+
+		{{ $indexScratch.Set "description" (.Params.text | truncate 75) }}
+		{{ if isset .Params "description" }}
+			{{ $indexScratch.Set "description" .Params.description }}
+		{{ end }}
+
+		{{ if isset .Params "labels" }}
+			{{ $indexScratch.Set "labels" .Params.labels }}
+		{{ end }}
+		{{ partial "card.html" $indexScratch }}
+	{{ end }}
+</div>
+{{ end }}

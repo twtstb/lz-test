@@ -1,0 +1,25 @@
+{{/*
+  Expects Scratch map as . with members: image, title, description, link
+	Optional members: labels
+*/}}
+<article class="hover card mw8-ns bg-near-white mb4">
+{{/* printf "%#v" . */}}
+<a href="{{ .Get "link" }}" class="link lh-title">
+<img src="{{ .Get "image" }}" class="hover w-100 db" alt="">
+</a>
+<div class="pt2 ph3">
+<h1 class="f5 f4-m f3-ns">
+<a href="{{ .Get "link" }}" class="link lh-title black-70">
+{{ .Get "title" }}</a></h1>
+</div>
+<div class="f5 f4-m f3-ns ph3 pt1 pb4">
+<a href="{{ .Get "link" }}" class="link lh-title black-80">
+{{ .Get "description" | markdownify }}</a>
+<br>
+{{- with .Get "labels" -}}
+{{- range . -}}
+<span class="dib ttu f6 f5-m f4-ns pt3 pr2 black-60">/{{ . }}</span>
+{{- end -}}
+{{- end -}}
+</div>
+</article>

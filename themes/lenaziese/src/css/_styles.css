@@ -1,0 +1,108 @@
+/* Put your custom styles here and run `npm start` from the "src" directory on */
+
+@import url('https://fontlibrary.org/face/hk-grotesk');
+
+@custom-media --breakpoint-not-small screen and (min-width: 40em);
+@custom-media --breakpoint-medium screen and (min-width: 40em) and (max-width: 91em);
+@custom-media --breakpoint-large screen and (min-width: 91em);
+
+.sans-serif {
+	font-family: 'HKGroteskRegular', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+}
+a {
+	color: var(--black-90);
+}
+.caption {
+	display: block;
+	padding-bottom: 0.5em;
+	position: absolute;
+	bottom: 0%;
+	color: #ccc;
+	mix-blend-mode: exclusion; 
+}
+/*
+a,
+.home .strike {
+	color: var(--black-90);
+	position: relative;
+}
+a.strike:after {
+content: '';
+border-bottom: 2px solid #FF4136;
+display: block;
+position: absolute;
+top: 0.125em;
+left: -0.5em;
+width: 115%;
+height: 1em;
+transform-origin: 0em 0em;
+transform: rotate(-8deg);
+}
+.home .strike:after {
+content: '';
+border-bottom: 2px solid #FF4136;
+display: block;
+position: absolute;
+top: 0.125em;
+left: -0.5em;
+width: 115%;
+height: 1em;
+transform-origin: 0em 0em;
+transform: rotate(-8deg);
+}
+.strike { text-decoration: none; }
+.-strike {
+	text-decoration-color: #FF4136;
+	-webkit-text-decoration-color: #FF4136;
+}
+*/
+nav a:active {
+	text-decoration: line-through;
+}
+
+@media (--breakpoint-not-small) {
+.section-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2rem;
+	grid-auto-rows: 1fr;
+	max-width: 140rem;
+	width: 100%;
+}
+}
+@media (--breakpoint-large) {
+.section-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2rem;
+	grid-auto-rows: 1fr;
+	max-width: 140rem;
+	width: 100%;
+}
+}
+
+.mt-content {
+	margin-top: 6.4125rem;
+	margin-top: 9rem;
+	margin-top: 2rem;
+}
+
+not_header {
+	box-shadow: 0px 1px 4px rgba( 0, 0, 0, .2 );
+}
+.hover:hover .hover {
+	box-shadow: 0 25px 25px -12px rgba(0,0,0,0.10);
+	transition: all 0.2s ease-in-out;
+}
+.menu-item {
+}
+.menu-item a {
+	display: block;
+	text-shadow: -5px 5px 15px gray; 
+}
+.menu-item--mediate a { margin-top: 50px; text-shadow: -5px 5px 12px gray; font-size: 2em; }
+.menu-item--educate a { margin-top: 90px; text-shadow: -5px 8px 10px gray; font-size: 2.5em; }
+.menu-item--curate a { margin-top: -50px; text-shadow: 2px 2px 2px gray; font-size: 1em; }
+.menu-item--create a { margin-top: 50px; text-shadow: 5px 5px 3px gray; font-size: 1.5em; }
+
+

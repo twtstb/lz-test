@@ -1,0 +1,9 @@
+<div class="cf w-100 nl3-ns">
+	{{ range .Params.images }}
+	<div class="fl w-50 pv3-ns pv1 ph3-ns ph1">
+		<div class="aspect-ratio aspect-ratio--4x3">
+			<span style="background-image:url({{.}});" class="cover bg-center aspect-ratio--object"></span>
+		</div>
+	</div>
+	{{ end }}
+</div>

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="f5 f4-m f3-ns ph4-m ph5-l mt-content">
+	<div class="pt3 ph3 ph0-ns">
+	<h2 class="f5 f4-m f3-ns">{{ .Params.title }}</h2>
+	{{ .Params.text }}
+	</div>
+	<div class="mt3">
+	{{ range .Params.images }}
+		<img src="{{.}}" alt="" class="db mr3 mb3">
+	{{ end }}
+	</div>
+</div>
+{{ end }}
+

@@ -1,0 +1,11 @@
+<div class="flex-ns mb4">
+  <div class="pr3-ns w-60-ns">
+		{{ range first 30 .Params.images }}
+    <img src="{{ . }}" alt="" class="db mb2">
+		{{ end }}
+  </div>
+  <div class="ph3 w-40-ns">
+    <h3 class="mt0-ns f3-ns">{{ .Params.title }}</h3>
+    <p>{{ .Params.text | markdownify }}</p>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+languageCode = "en-us"
+title = "Lena Ziese"
+theme = "lenaziese"
+disableHugoGeneratorInject = true
+#sectionPagesMenu = "main"
+summaryLength = 25
+[blackfriday]
+  extensions = ["hardLineBreak"]

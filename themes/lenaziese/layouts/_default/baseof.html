@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{{- partial "head.html" . -}}
+<body class="sans-serif bg-near-white black-80">
+{{- if not .IsHome -}}
+{{- partial "header.html" . -}}
+{{- end -}}
+<div class="content{{ if .IsHome }} home{{ end }}">
+{{- block "main" . -}}{{- end -}}
+</div>
+{{- partial "footer.html" . -}}
+</body>
+</html>

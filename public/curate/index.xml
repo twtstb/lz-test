@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curator on Lena Ziese</title>
+    <link>/curate/</link>
+    <description>Recent content in Curator on Lena Ziese</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/curate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Right Brain Problems</title>
+      <link>/curate/right-brain-problems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/curate/right-brain-problems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jet exhibition space</title>
+      <link>/curate/jet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/curate/jet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Untitled (Ohne Titel)</title>
+      <link>/curate/untitled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/curate/untitled/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chris Reinecke – art is necessary</title>
+      <link>/curate/chris-reinecke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/curate/chris-reinecke/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fehler (Failure/Error/Mistake)</title>
+      <link>/curate/fehler-error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/curate/fehler-error/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

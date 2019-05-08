@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="f45 pa3 ph4-m ph5-l mt-content">
+	{{ .Content }}
+	<ul class="list pl0">
+		{{ range .Pages }}
+		<li>
+			<a href="{{ .Permalink }}">{{ .Title }}</a>
+			{{ with .Params.images }}
+				{{ range first 1 . }}
+			<img src="{{ . }}" alt="">
+				{{ end }}
+			{{ end }}
+		</li>
+		{{ end }}
+	</ul>
+</div>
+{{ end }}

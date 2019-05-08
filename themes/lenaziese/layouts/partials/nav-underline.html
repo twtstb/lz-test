@@ -1,0 +1,22 @@
+<nav class="f4 f3-ns fw4 flex flex-column justify-between center">
+	<div class="flex flex-row justify-between">
+		<a href="/" class="db pt3 pt4-ns ttu no-underline black-80 dim">{{ .Site.Title }}</a>
+		{{ $lz_section := (index (split .Dir "/") 0) }}
+		<a href="/contact-info" class="db pt3 pt4-ns ttu dim link black-80{{ if (eq $lz_section "contact-info") }} bb b--black-80{{ end }}">contact/ info</a>
+{{/*
+		<span class="mt3 mt4-ns tr">
+			<a href="mailto:lz@lenaziese.net" class="dib dim"><svg class="icon icon-contact"><use xlink:href="#contact"></use></svg></a>
+			<svg class="icon icon-separator"><use xlink:href="#separator"></use></svg>
+			<a href="mailto:lz@lenaziese.net" class="dib dim"><svg class="icon icon-info"><use xlink:href="#info"></use></svg></a>
+		</span>
+*/}}
+	</div>
+	<ul class="list pl0 ma0 flex flex-row justify-between justify-start-ns">
+	{{ range .Site.Menus.main }}
+		{{ $lz_section := (index (split .URL "/") 1) }}
+		{{ $lz_url_section := print $lz_section }}
+		<li class="db"><a href="{{ .URL }}" class="pt2 pb1 mr4-ns link dib black-80{{if or ($.IsMenuCurrent "main" .) (eq ($.Scratch.Get "lz_section"|lower) ($lz_url_section|lower)) }} bb lz-b--{{ $.Scratch.Get "lz_section" }} lz-{{ $lz_section }}{{end}} hover-lz-{{ $lz_section }}">{{ .Name }}</a></li>
+	{{ end }}
+	</ul>
+</nav>
+

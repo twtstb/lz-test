@@ -1,0 +1,12 @@
+{{/*
+  Expects Scratch map as . with members: image, title, description, link
+	Optional members: labels
+*/}}
+{{/* printf "%#v" . */}}
+<a href="{{ .Get "link" }}" class="db mt4 mb6 link lh-title">
+	<div class="vh-100 db cover" style="background-image: url({{ .Get "image" }}">
+		<div class="bg-black-50 top left vh-100 flex flex-column justify-center">
+			<h1 class="f2 tc white-90" style="bottom: 42%">{{ .Get "title" }}</h1>
+		</div>
+	</div>
+</a>

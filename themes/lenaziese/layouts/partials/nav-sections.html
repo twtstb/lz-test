@@ -1,0 +1,11 @@
+<nav class="f5 f4-m f3-ns fw4 flex flex-column justify-between center">
+	<ul class="list pl0 ma0 flex flex-row justify-between justify-start-ns">
+		<li class="db"><a href="/" class="pt2 pb1 mr4-ns link dib black-80 dim strike">all</a></li>
+	{{ range .Site.Menus.main }}
+		{{ $lz_section := (index (split .URL "/") 1) }}
+		{{ $lz_url_section := print $lz_section }}
+		<li class="db"><a href="{{ .URL }}" class="pt2 pb1 mr4-ns link dib black-80 dim{{if or ($.IsMenuCurrent "main" .) (eq ($.Scratch.Get "lz_section"|lower) ($lz_url_section|lower)) }} strike{{end}}">{{ .Name }}</a></li>
+	{{ end }}
+	</ul>
+</nav>
+

@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="f5 f4-m f3-ns ph4-m ph5-l mt-content">
+	<div class="ph3 ph0-ns">
+	<h1 class="f5 f4-m f3-ns">{{ .Params.title }}</h1>
+	{{ .Params.text }}
+	</div>
+	{{ partial "gallery-2up.html" . }}
+</div>
+{{ end }}
+

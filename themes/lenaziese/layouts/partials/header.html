@@ -1,0 +1,5 @@
+{{- $lz_section := (index (split .URL "/") 1) -}}
+{{- $.Scratch.Set "lz_section" $lz_section }}
+<header class="top-0 z-999 bg-near-white w-100 ph3 ph4-m ph5-l">
+	{{ partial "nav.html" . }}
+</header>
